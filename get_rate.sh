@@ -33,7 +33,7 @@ export PATH="${PATH}:/home/justa/dev/go/bin:/usr/local/bin:/usr/bin:/usr/sbin:/b
 rate=`phantomjs save.js https://www.walutomat.pl page.html 1>/dev/null 2>/dev/null && cat page.html | pup '.USD_PLN .buy' | head -n 2 | tail -n 1 | awk '{$1=$1};1'`
 if [ -z "${rate}" ]
 then
-  echo "$0: error getting USD?PLN rate"
+  echo "$0: error getting USD/PLN rate"
   exit 1
 fi
 MAIL_TO=lukaszgryglicki@o2.pl
