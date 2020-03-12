@@ -1,0 +1,1 @@
+0 */3 * * * /usr/local/bin/get_rate.sh 1>>/tmp/get_rate.log 2>>/tmp/get_rate.err
